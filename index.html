@@ -1,21 +1,850 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>CytoPet Labs</title>
-	<link rel="stylesheet" href="">
+
+	<!-- Google Fonts — Poppins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap">
+
+	<!-- Flaticon Uicons — load the styles you need -->
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+	<!-- Project CSS -->
+	<link rel="stylesheet" href="assets/css/variables.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<style>
-	*,
-	*::before,
-	*::after {
-	    margin: 0;
-	    padding: 0;
-	    box-sizing: border-box;
-	}
-</style>
 <body>
-	<img src="cyto-pet-labs.jpg" alt="" width="100%" height="auto">
+
+	<!-- ═══════════════════════════════════════════
+						TOPBAR
+	════════════════════════════════════════════ -->
+	<div class="topbar">
+		<div class="container">
+			<div class="topbar__inner">
+				<!-- Left — contact info -->
+				<ul class="topbar__contact">
+					<li class="topbar__item">
+						<i data-lucide="phone" class="topbar__icon"></i>
+						<a href="tel:+919674000000">+91-9674XXXXXX</a>
+					</li>
+					<li class="topbar__divider" aria-hidden="true"></li>
+					<li class="topbar__item">
+						<i data-lucide="mail" class="topbar__icon"></i>
+						<a href="mailto:info@cytopet.in">info@cytopet.in</a>
+					</li>
+				</ul>
+				<!-- Right — social links -->
+				<ul class="topbar__social">
+					<li>
+						<a href="#" class="topbar__social-link" aria-label="Facebook">
+							<i class="fi fi-brands-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="topbar__social-link" aria-label="Instagram">
+							<i class="fi fi-brands-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="topbar__social-link" aria-label="LinkedIn">
+							<i class="fi fi-brands-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- ═══════════════════════════════════════════
+				NAVBAR
+	════════════════════════════════════════════ -->
+	<header class="navbar" id="navbar">
+		<div class="container">
+			<div class="navbar__inner">
+
+				<!-- Logo -->
+				<a href="index.html" class="navbar__logo" aria-label="CytoPet Labs Home">
+					<img src="assets/images/logo.png" alt="CytoPet Labs" class="navbar__logo-img">
+				</a>
+
+				<!-- Desktop nav -->
+				<nav class="navbar__nav" aria-label="Main navigation">
+					<ul class="navbar__links">
+						<li><a href="index.html"   class="navbar__link navbar__link--active">Home</a></li>
+						<li><a href="about.html"   class="navbar__link">About</a></li>
+						<li class="navbar__item--dropdown">
+							<a href="products.html"  class="navbar__link navbar__link--has-arrow">
+								Products
+								<i data-lucide="chevron-down" class="navbar__chevron"></i>
+							</a>
+							<!-- Dropdown (optional — remove if not needed) -->
+							<ul class="navbar__dropdown">
+								<li><a href="#" class="navbar__dropdown-link">CytoReno™ Feline</a></li>
+								<li><a href="#" class="navbar__dropdown-link">CytoReno™ Canine</a></li>
+								<li><a href="#" class="navbar__dropdown-link">GutForte</a></li>
+								<li><a href="#" class="navbar__dropdown-link">ParaShield</a></li>
+								<li><a href="products.html" class="navbar__dropdown-link navbar__dropdown-link--all">All Products →</a></li>
+							</ul>
+						</li>
+						<li><a href="blogs.html"   class="navbar__link">Blogs</a></li>
+						<li><a href="contact.html" class="navbar__link">Contact</a></li>
+					</ul>
+				</nav>
+
+				<!-- Mobile hamburger -->
+				<button class="navbar__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+			</div>
+		</div>
+
+		<!-- Mobile menu -->
+		<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+			<div class="container">
+				<ul class="mobile-menu__links">
+					<li><a href="index.html"   class="mobile-menu__link mobile-menu__link--active">Home</a></li>
+					<li><a href="about.html"   class="mobile-menu__link">About</a></li>
+					<li><a href="products.html"class="mobile-menu__link">Products</a></li>
+					<li><a href="blogs.html"   class="mobile-menu__link">Blogs</a></li>
+					<li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- ═══════════════════════════════════════════
+				HERO
+	════════════════════════════════════════════ -->
+	<section class="hero" id="home">
+		<!-- Full-width background image -->
+		<img
+			src="assets/images/hero-pets.jpg"
+			alt="A happy golden retriever and cat sitting together"
+			class="hero__bg-image"
+			width="1440"
+			height="600"
+			fetchpriority="high"
+		>
+		<!-- Gradient overlay so text stays readable -->
+		<div class="hero__overlay" aria-hidden="true"></div>
+		<!-- Content -->
+		<div class="container hero__container">
+			<div class="hero__content">
+				<h1 class="hero__title">
+					Supporting Better <br>
+					Health for Your Pets.
+				</h1>
+				<p class="hero__subtitle">
+					Science-backed supplements for kidney,<br>
+					liver, gut and overall wellness in dogs and cats
+				</p>
+				<div class="hero__actions">
+					<a href="products.html" class="btn btn--accent btn--lg">
+						Explore Our Products
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+					<a href="contact.html" class="btn btn--accent btn--lg">
+						Enquiry Now
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+				ABOUT / INTRO
+	════════════════════════════════════════════ -->
+	<section class="about section" id="about">
+		<div class="container">
+			<div class="about__inner">
+				<!-- Left — image creative -->
+				<div class="about__media">
+					<!-- <img src="assets/images/about-paw-bg.png"  alt="" class="about__paw"  aria-hidden="true"> -->
+					<img src="assets/images/about-pets.jpg"    alt="A cat and golden retriever sitting together" class="about__pets">
+				</div>
+				<!-- Right — content -->
+				<div class="about__content">
+					<span class="section-tag">
+						About Our Pet Supplements
+						<i class="fi fi-sr-paw" aria-hidden="true"></i>
+					</span>
+					<h2 class="about__title">
+					Scientifically Proven Pet Supplements
+					</h2>
+					<p class="about__text">
+						Our pet supplements are developed with a focus on your pet's everyday
+						health and wellbeing. Using carefully selected, high-quality ingredients,
+						they help support key needs such as immunity, digestion, joint care and
+						overall vitality.
+					</p>
+					<p class="about__text">
+						This website brings you clear, science-backed information about our pet
+						supplement range, their key benefits and how they can support a healthier,
+						more active life for your pets.
+					</p>
+					<a href="products.html" class="btn btn--accent btn--lg about__cta">
+						Explore Our Products
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+				PRODUCTS CAROUSEL
+	════════════════════════════════════════════ -->
+	<section class="products section" id="products">
+		<div class="container">
+			<!-- Section header -->
+			<div class="products__header">
+				<div class="products__header-left">
+					<span class="section-tag">
+						About Our Pet Supplements
+						<i class="fi fi-sr-paw" aria-hidden="true"></i>
+					</span>
+					<h2 class="products__title">
+					Targeted Nutrition for<br>Your Pet's Wellbeing
+					</h2>
+				</div>
+				<div class="products__header-right">
+					<a href="products.html" class="btn btn--secondary btn--lg">
+						Explore Our Products
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+				</div>
+			</div>
+			<!-- Swiper -->
+			<div class="swiper products__swiper">
+				<div class="swiper-wrapper">
+					<!-- Card 1 -->
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__image-wrap">
+								<span class="product-card__circle" aria-hidden="true"></span>
+								<img src="assets/images/cytoreno-feline.png"
+								alt="CytoReno Feline" class="product-card__image">
+							</div>
+							<div class="product-card__body">
+								<h3 class="product-card__name">CytoReno<sup>TM</sup> Feline</h3>
+								<p class="product-card__desc">
+									Supports kidney and liver health in cats with targeted nutrition
+								</p>
+								<a href="products/cytoreno-feline.html" class="btn btn--accent product-card__btn">
+									See Details
+									<i data-lucide="arrow-right" class="btn__icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Card 2 -->
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__image-wrap">
+								<span class="product-card__circle" aria-hidden="true"></span>
+								<img src="assets/images/cytoreno-feline.png"
+								alt="CytoReno Canine" class="product-card__image">
+							</div>
+							<div class="product-card__body">
+								<h3 class="product-card__name">CytoReno<sup>TM</sup> Canine</h3>
+								<p class="product-card__desc">
+									Supports kidney and liver health in dogs with targeted nutrition
+								</p>
+								<a href="products/cytoreno-canine.html" class="btn btn--accent product-card__btn">
+									See Details
+									<i data-lucide="arrow-right" class="btn__icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Card 3 -->
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__image-wrap">
+								<span class="product-card__circle" aria-hidden="true"></span>
+								<img src="assets/images/cytoreno-feline.png"
+								alt="GutForte" class="product-card__image">
+							</div>
+							<div class="product-card__body">
+								<h3 class="product-card__name">GutForte</h3>
+								<p class="product-card__desc">
+									Promotes healthy gut flora and optimal digestion in pets
+								</p>
+								<a href="products/gutforte.html" class="btn btn--accent product-card__btn">
+									See Details
+									<i data-lucide="arrow-right" class="btn__icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Card 4 -->
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__image-wrap">
+								<span class="product-card__circle" aria-hidden="true"></span>
+								<img src="assets/images/cytoreno-feline.png"
+								alt="ParaShield" class="product-card__image">
+							</div>
+							<div class="product-card__body">
+								<h3 class="product-card__name">ParaShield</h3>
+								<p class="product-card__desc">
+									Natural parasite defence and immune support for dogs and cats
+								</p>
+								<a href="products/parashield.html" class="btn btn--accent product-card__btn">
+									See Details
+									<i data-lucide="arrow-right" class="btn__icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Add more slides as needed -->
+				</div>
+				<!-- Pagination dots -->
+				<div class="swiper-pagination products__pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+				FEATURES / WHY CHOOSE US
+	════════════════════════════════════════════ -->
+	<section class="features section" id="why-us">
+		<div class="container">
+			<!-- Section header — centered -->
+			<div class="features__header">
+				<span class="section-tag">
+					Why Choose Our Pet Supplements
+					<i class="fi fi-sr-paw" aria-hidden="true"></i>
+				</span>
+				<h2 class="features__title">
+					Complete Nutritional Support for<br>
+					Your Pet's Health and Wellbeing
+				</h2>
+			</div>
+			<!-- 3-column grid -->
+			<div class="features__grid">
+				<!-- Left column -->
+				<div class="features__col features__col--left">
+					<div class="feature-item">
+						<div class="feature-item__icon-wrap">
+							<i class="fi fi-rr-paw" aria-hidden="true"></i>
+						</div>
+						<div class="feature-item__body">
+							<h3 class="feature-item__title">Supports Daily Wellness</h3>
+							<p class="feature-item__desc">
+								Targeted nutrition to help maintain your pet's everyday health and vitality.
+							</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-item__icon-wrap">
+							<i class="fi fi-rr-shield-exclamation" aria-hidden="true"></i>
+						</div>
+						<div class="feature-item__body">
+							<h3 class="feature-item__title">Aids Digestive Health</h3>
+							<p class="feature-item__desc">
+								Selected ingredients that support a healthy gut, better digestion and nutrient absorption.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Center — pet image with blob bg -->
+				<div class="features__center">
+					<!-- <span class="features__blob" aria-hidden="true"></span> -->
+					<img src="assets/images/features-pet.png"
+					alt="Happy golden retriever"
+					class="features__pet-img">
+				</div>
+				<!-- Right column -->
+				<div class="features__col features__col--right">
+					<div class="feature-item">
+						<div class="feature-item__icon-wrap">
+							<i class="fi fi-rr-shield-cross" aria-hidden="true"></i>
+						</div>
+						<div class="feature-item__body">
+							<h3 class="feature-item__title">Helps Maintain Immunity</h3>
+							<p class="feature-item__desc">
+								Nutritional support to strengthen your pet's natural defences.
+							</p>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-item__icon-wrap">
+							<i class="fi fi-rr-dog" aria-hidden="true"></i>
+						</div>
+						<div class="feature-item__body">
+							<h3 class="feature-item__title">Supports Organ Function</h3>
+							<p class="feature-item__desc">
+								Supports joint, kidney, liver and overall function to keep your pet active, comfortable and happy.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.features__grid -->
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+			FAQ
+	════════════════════════════════════════════ -->
+	<section class="faq section" id="faq">
+		<div class="container">
+			<div class="faq__grid">
+				<!-- Left — pet image -->
+				<div class="faq__media">
+					<img src="assets/images/faq-pet.png"
+					alt="Curious kitten"
+					class="faq__pet-img">
+				</div>
+				<!-- Right — content + accordion -->
+				<div class="faq__content">
+					<div class="faq__heading">
+						<span class="section-tag">
+							Frequently Asked Questions
+							<i class="fi fi-sr-paw" aria-hidden="true"></i>
+						</span>
+						<h2 class="faq__title">
+							Everything You Need to<br>
+							Know About Supplements
+						</h2>
+						<p class="faq__intro">
+							Our pet supplements are carefully formulated with quality ingredients to
+							support key areas of your pet's health, including digestion, immunity,
+							joint care and overall vitality.
+						</p>
+					</div>
+					<!-- Accordion -->
+					<div class="faq__accordion" id="faqAccordion">
+						<div class="faq__item faq__item--open">
+							<button class="faq__trigger" aria-expanded="true">
+							<span class="faq__trigger-text">1. How do I choose the right supplement for my pet?</span>
+							<!-- replace this in every faq__trigger -->
+							<span class="faq__icon" aria-hidden="true">
+							  <i data-lucide="plus"  class="faq__icon--plus"></i>
+							  <i data-lucide="minus" class="faq__icon--minus"></i>
+							</span>
+							</button>
+							<div class="faq__panel">
+								<p>Our pet supplements are carefully formulated with quality ingredients
+									to support key areas of your pet's health, including digestion,
+								immunity, joint care and overall vitality.</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<button class="faq__trigger" aria-expanded="false">
+							<span class="faq__trigger-text">2. Are your supplements safe for all breeds?</span>
+							<span class="faq__icon" aria-hidden="true">
+							  <i data-lucide="plus"  class="faq__icon--plus"></i>
+							  <i data-lucide="minus" class="faq__icon--minus"></i>
+							</span>
+							</button>
+							<div class="faq__panel">
+								<p>Yes, our formulas are developed by veterinary nutritionists and are
+									suitable for most breeds and life stages. Always consult your vet if
+								your pet has an existing condition.</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<button class="faq__trigger" aria-expanded="false">
+							<span class="faq__trigger-text">3. How long before I see results?</span>
+							<span class="faq__icon" aria-hidden="true">
+							  <i data-lucide="plus"  class="faq__icon--plus"></i>
+							  <i data-lucide="minus" class="faq__icon--minus"></i>
+							</span>
+							</button>
+							<div class="faq__panel">
+								<p>Most pet owners notice improvements within 3–4 weeks of consistent
+									daily use. Results may vary depending on the supplement and your
+								pet's individual health.</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<button class="faq__trigger" aria-expanded="false">
+							<span class="faq__trigger-text">4. Can I give multiple supplements together?</span>
+							<span class="faq__icon" aria-hidden="true">
+							  <i data-lucide="plus"  class="faq__icon--plus"></i>
+							  <i data-lucide="minus" class="faq__icon--minus"></i>
+							</span>
+							</button>
+							<div class="faq__panel">
+								<p>Our products are designed to complement each other. We recommend
+									starting with one supplement and gradually introducing others,
+								following the dosage guidelines on each pack.</p>
+							</div>
+						</div>
+					</div><!-- /.faq__accordion -->
+				</div><!-- /.faq__content -->
+			</div><!-- /.faq__grid -->
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+			CONTACT / ENQUIRY CTA
+	════════════════════════════════════════════ -->
+	<section class="contact-cta" id="contact">
+		<div class="contact-cta__wrap">
+			<div class="contact-cta__card">
+				<!-- Pets peeking over the top-right corner -->
+				<img src="assets/images/contact-pets.png"
+				alt=""
+				class="contact-cta__pets"
+				aria-hidden="true">
+				<!-- Left — heading + copy -->
+				<div class="contact-cta__left">
+					<span class="contact-cta__tag">
+						We're Here to Help
+						<i class="fi fi-sr-paw" aria-hidden="true"></i>
+					</span>
+					<h2 class="contact-cta__title">Have a Question!?</h2>
+					<p class="contact-cta__desc">
+						Whether you're exploring nutritional support for your pet or looking
+						for product information, our team is here to help. Get in touch with
+						us to learn more about our formulations and how they support pet
+						health and wellbeing.
+					</p>
+					<a href="products.html" class="btn contact-cta__explore">
+						Explore Our Products
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+				</div>
+				<!-- Right — enquiry form -->
+				<div class="contact-cta__right">
+					<form class="contact-cta__form" novalidate>
+						<div class="contact-cta__row">
+							<input type="text"   name="first_name"    placeholder="First Name"     class="contact-cta__input" required>
+							<input type="text"   name="last_name"     placeholder="Last Name"      class="contact-cta__input" required>
+						</div>
+						<div class="contact-cta__row">
+							<input type="tel"    name="phone"         placeholder="Phone Number"   class="contact-cta__input">
+							<input type="email"  name="email"         placeholder="Your Email"     class="contact-cta__input" required>
+						</div>
+						<textarea name="message" placeholder="Write Your Enquiry"
+						class="contact-cta__input contact-cta__textarea"
+						rows="5" required></textarea>
+						<div class="contact-cta__form-footer">
+							<button type="submit" class="btn contact-cta__submit">
+							Enquiry Now
+							<i data-lucide="arrow-right" class="btn__icon"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div><!-- /.contact-cta__card -->
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+			BLOG / LATEST POSTS
+	════════════════════════════════════════════ -->
+	<section class="blog section" id="blog">
+		<div class="container">
+			<!-- Section header -->
+			<div class="blog__header">
+				<div class="blog__header-left">
+					<span class="section-tag">
+						Our Blogs
+						<i class="fi fi-sr-paw" aria-hidden="true"></i>
+					</span>
+					<h2 class="blog__title">Latest Post &amp; Articles</h2>
+				</div>
+				<div class="blog__header-right">
+					<a href="blogs.html" class="btn blog__explore">
+						Explore Our Articles
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+					</a>
+				</div>
+			</div>
+			<!-- Blog Swiper -->
+			<div class="swiper blog__swiper">
+				<div class="swiper-wrapper">
+					<!-- Card 1 -->
+					<div class="swiper-slide">
+						<article class="blog-card">
+							<div class="blog-card__image-wrap">
+								<img src="assets/images/blog-1.jpg"
+								alt="Person feeding a small dog"
+								class="blog-card__image">
+							</div>
+							<div class="blog-card__body">
+								<div class="blog-card__meta">
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-circle-user" aria-hidden="true"></i>
+										By CytoPet Labs
+									</span>
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-calendar" aria-hidden="true"></i>
+										10 Nov, 2026
+									</span>
+								</div>
+								<h3 class="blog-card__title">
+								<a href="blog/pet-supplements-everyday-wellness.html">
+									How Pet Supplements Can Support Everyday Wellness
+								</a>
+								</h3>
+								<p class="blog-card__desc">
+									Learn how targeted nutrition can help maintain your pet's immunity,
+									digestion and overall wellbeing.
+								</p>
+							</div>
+						</article>
+					</div>
+					<!-- Card 2 -->
+					<div class="swiper-slide">
+						<article class="blog-card">
+							<div class="blog-card__image-wrap">
+								<img src="assets/images/blog-1.jpg"
+								alt="Woman with her dog"
+								class="blog-card__image">
+							</div>
+							<div class="blog-card__body">
+								<div class="blog-card__meta">
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-circle-user" aria-hidden="true"></i>
+										By CytoPet Labs
+									</span>
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-calendar" aria-hidden="true"></i>
+										05 Nov, 2026
+									</span>
+								</div>
+								<h3 class="blog-card__title">
+								<a href="blog/gut-health-in-pets.html">
+									Gut Health in Pets: Why It Matters and How to Support It
+								</a>
+								</h3>
+								<p class="blog-card__desc">
+									A closer look at digestive health, gut balance and the role of
+									nutritional supplements for dogs and cats.
+								</p>
+							</div>
+						</article>
+					</div>
+					<!-- Card 3 -->
+					<div class="swiper-slide">
+						<article class="blog-card">
+							<div class="blog-card__image-wrap">
+								<img src="assets/images/blog-1.jpg"
+								alt="Person holding a puppy"
+								class="blog-card__image">
+							</div>
+							<div class="blog-card__body">
+								<div class="blog-card__meta">
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-circle-user" aria-hidden="true"></i>
+										By CytoPet Labs
+									</span>
+									<span class="blog-card__meta-item">
+										<i class="fi fi-rr-calendar" aria-hidden="true"></i>
+										28 Oct, 2026
+									</span>
+								</div>
+								<h3 class="blog-card__title">
+								<a href="blog/joint-support-active-ageing-pets.html">
+									Joint Support for Active &amp; Ageing Pets
+								</a>
+								</h3>
+								<p class="blog-card__desc">
+									Understand how key nutritional ingredients can support joint
+									function, mobility and an active lifestyle at every age.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div><!-- /.swiper-wrapper -->
+					<!-- Pagination dots -->
+				<div class="swiper-pagination blog__pagination"></div>
+			</div><!-- /.blog__swiper -->
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+			NEWSLETTER SUBSCRIBE
+	════════════════════════════════════════════ -->
+	<section class="newsletter" id="newsletter">
+		<div class="newsletter__wrap">
+			<div class="newsletter__card">
+				<!-- Left — heading + copy -->
+				<div class="newsletter__left">
+					<h2 class="newsletter__title">Subscribe to Our Newsletter</h2>
+					<p class="newsletter__desc">
+						Sign up for weekly pet health tips and insights from our veterinarians.
+					</p>
+				</div>
+				<!-- Center — form -->
+				<form class="newsletter__form" novalidate>
+					<div class="newsletter__input-group">
+						<span class="newsletter__input-icon" aria-hidden="true">
+							<i data-lucide="mail"></i>
+						</span>
+						<input type="email"
+						name="newsletter_email"
+						placeholder="Email Address"
+						class="newsletter__input"
+						required>
+						<button type="submit" class="newsletter__btn">
+						Subscribe
+						<i data-lucide="arrow-right" class="btn__icon"></i>
+						</button>
+					</div>
+				</form>
+				<!-- Right — pet image (overflows card) -->
+				<div class="newsletter__media" aria-hidden="true">
+					<img src="assets/images/newsletter-pets.png"
+					alt=""
+					class="newsletter__pets">
+				</div>
+			</div><!-- /.newsletter__card -->
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════
+			FOOTER
+	════════════════════════════════════════════ -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<!-- Main footer grid -->
+			<div class="footer__grid">
+				<!-- Col 1 — Brand -->
+				<div class="footer__brand">
+					<a href="index.html" class="footer__logo-link" aria-label="CytoPet Labs Home">
+						<img src="assets/images/logo-white.png"
+						alt="CytoPet Labs"
+						class="footer__logo">
+					</a>
+					<p class="footer__tagline">
+						Science-backed pet supplements to support digestion, immunity,
+						joint care, kidney and liver health, and overall wellbeing for
+						dogs and cats.
+					</p>
+					<div class="footer__silhouette" aria-hidden="true">
+						<img src="assets/images/footer-pets-silhouette.png"
+						alt=""
+						class="footer__silhouette-img">
+					</div>
+				</div>
+				<!-- Col 2 — Products -->
+				<div class="footer__col">
+					<h4 class="footer__col-heading">
+					<i class="fi fi-rr-box-alt" aria-hidden="true"></i>
+					Products
+					</h4>
+					<ul class="footer__links">
+						<li><a href="products/cytoreno-feline.html" class="footer__link">CytoReno Feline</a></li>
+						<li><a href="products/cytoreno-canine.html" class="footer__link">CytoReno Canine</a></li>
+						<li><a href="products/gutforte.html"        class="footer__link">GutForte</a></li>
+						<li><a href="products/florashield.html"     class="footer__link">FloraShield</a></li>
+						<li><a href="products.html"                 class="footer__link">All Products</a></li>
+					</ul>
+				</div>
+				<!-- Col 3 — Learn -->
+				<div class="footer__col">
+					<h4 class="footer__col-heading">
+					<i class="fi fi-rr-flask" aria-hidden="true"></i>
+					Learn
+					</h4>
+					<ul class="footer__links">
+						<li><a href="about.html"           class="footer__link">About Us</a></li>
+						<li><a href="science.html"         class="footer__link">Science &amp; Research</a></li>
+						<li><a href="blogs.html"           class="footer__link">Pet Health Insights</a></li>
+						<li><a href="veterinarians.html"   class="footer__link">For Veterinarians</a></li>
+						<li><a href="therapeutic-areas.html" class="footer__link">Therapeutic Areas</a></li>
+					</ul>
+				</div>
+				<!-- Col 4 — Support -->
+				<div class="footer__col">
+					<h4 class="footer__col-heading">
+					<i class="fi fi-rr-headset" aria-hidden="true"></i>
+					Support
+					</h4>
+					<ul class="footer__links">
+						<li><a href="#faq"              class="footer__link">FAQs</a></li>
+						<li><a href="contact.html"      class="footer__link">Contact Us</a></li>
+						<li><a href="privacy.html"      class="footer__link">Privacy Policy</a></li>
+						<li><a href="terms.html"        class="footer__link">Terms of Use</a></li>
+						<li><a href="cookies.html"      class="footer__link">Cookie Policy</a></li>
+					</ul>
+				</div>
+				<!-- Col 5 — Contact info -->
+				<div class="footer__contact">
+					<div class="footer__address-block">
+						<div class="footer__address-heading">
+							<i class="fi fi-rr-marker" aria-hidden="true"></i>
+							<strong>Corporate Office</strong>
+						</div>
+						<p class="footer__address-text">
+							Eskag Pharma Private Limited,<br>
+							Suite No.804 &amp; 805, AG-112, Sector-II,<br>
+							Baishakhi, Salt Lake City, Kolkata,<br>
+							West Bengal 700 091, India
+						</p>
+					</div>
+					<hr class="footer__divider">
+					<div class="footer__address-block">
+						<div class="footer__address-heading">
+							<i class="fi fi-rr-marker" aria-hidden="true"></i>
+							<strong>Manufacturing Units</strong>
+						</div>
+						<p class="footer__address-text">
+							Unit-III, Plot No. 33 &amp; 34, Sector 6A,<br>
+							I.I.E. Sidcul, Ranipur, Haridwar,<br>
+							Uttarakhand 249403, India
+						</p>
+					</div>
+					<div class="footer__contact-links">
+						<a href="mailto:info@cytopetlabs.com" class="footer__contact-link">
+							<i class="fi fi-rr-envelope" aria-hidden="true"></i>
+							info@cytopetlabs.com
+						</a>
+						<a href="tel:+913340251717" class="footer__contact-link">
+							<i class="fi fi-rr-phone-call" aria-hidden="true"></i>
+							+919674 XXXXX
+						</a>
+					</div>
+				</div><!-- /.footer__contact -->
+			</div><!-- /.footer__grid -->
+			<!-- Bottom bar -->
+			<div class="footer__bottom">
+				<p class="footer__copy">
+					&copy; 2026 CytoPet Labs – Eskag Pharma Private Limited. All rights reserved.
+				</p>
+				<nav class="footer__legal" aria-label="Legal links">
+					<a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+					<span class="footer__legal-sep" aria-hidden="true">|</span>
+					<a href="terms.html"   class="footer__legal-link">Terms of Use</a>
+					<span class="footer__legal-sep" aria-hidden="true">|</span>
+					<a href="cookies.html" class="footer__legal-link">Cookie Policy</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>

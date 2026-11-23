@@ -1,0 +1,682 @@
+/* ============================================================
+   CYTOPET LABS — COMPLETE DESIGN TOKENS
+   variables.css
+   ============================================================ */
+
+:root {
+
+  /* ============================================================
+     1. COLOUR SYSTEM
+     ============================================================ */
+
+  /* ── Raw palette ── */
+
+  /* White / Body */
+  --color-white:            #ffffff;
+  --color-white-soft:       #fafcfe;
+  --color-off-white:        #f5f8fb;
+
+  /* Primary — Bright Blue  #0261aa */
+  --color-primary-50:       #e6f2fb;
+  --color-primary-100:      #b8d9f4;
+  --color-primary-200:      #89bfed;
+  --color-primary-300:      #5aa5e6;
+  --color-primary-400:      #2b8bde;
+  --color-primary-500:      #0261aa;   /* ← brand primary */
+  --color-primary-600:      #014d88;
+  --color-primary-700:      #013a67;
+  --color-primary-800:      #012747;
+  --color-primary-900:      #001527;
+
+  /* Navy — Deep tone  #1f5879  (headings · dark sections · footer) */
+  --color-navy-50:          #eaf2f8;
+  --color-navy-100:         #c8dff0;
+  --color-navy-200:         #9ec4e3;
+  --color-navy-300:         #6da6d3;
+  --color-navy-400:         #4288bf;
+  --color-navy-500:         #1f5879;   /* ← brand navy */
+  --color-navy-600:         #174460;
+  --color-navy-700:         #113349;
+  --color-navy-800:         #0b2232;
+  --color-navy-900:         #05111a;
+
+  /* Secondary / Accent — Green-Teal  #287a70 */
+  --color-secondary-50:     #e8f5f3;
+  --color-secondary-100:    #bde3de;
+  --color-secondary-200:    #8ecec7;
+  --color-secondary-300:    #5eb9b0;
+  --color-secondary-400:    #3b9e94;
+  --color-secondary-500:    #287a70;   /* ← brand secondary */
+  --color-secondary-600:    #1f6059;
+  --color-secondary-700:    #174843;
+  --color-secondary-800:    #0e302c;
+  --color-secondary-900:    #061916;
+
+  /* Neutrals / Greys */
+  --color-gray-50:          #f8fafc;
+  --color-gray-100:         #f0f4f8;
+  --color-gray-200:         #e2eaf2;
+  --color-gray-300:         #cbd8e6;
+  --color-gray-400:         #94aec4;
+  --color-gray-500:         #6b8ca4;
+  --color-gray-600:         #4d6d85;
+  --color-gray-700:         #334f63;
+  --color-gray-800:         #1a3144;
+  --color-gray-900:         #0d1e2b;
+
+  /* Dark / Footer */
+  --color-dark:             #0d2233;
+  --color-black:            #000000;
+
+  /* Semantic — Status */
+  --color-success-bg:       #d4eeeb;
+  --color-success:          #287a70;
+  --color-success-dark:     #1f6059;
+
+  --color-warning-bg:       #fef3c7;
+  --color-warning:          #d97706;
+  --color-warning-dark:     #b45309;
+
+  --color-error-bg:         #fee2e2;
+  --color-error:            #dc2626;
+  --color-error-dark:       #b91c1c;
+
+  --color-info-bg:          #e6f2fb;
+  --color-info:             #0261aa;
+  --color-info-dark:        #014d88;
+
+  /* ── Semantic / Role aliases ── */
+
+  /* Backgrounds */
+  --bg-body:                var(--color-white);
+  --bg-soft:                var(--color-off-white);
+  --bg-alt:                 var(--color-gray-100);
+  --bg-primary:             var(--color-primary-500);
+  --bg-primary-light:       var(--color-primary-50);
+  --bg-navy:                var(--color-navy-500);
+  --bg-navy-light:          var(--color-navy-50);
+  --bg-secondary:           var(--color-secondary-500);
+  --bg-secondary-light:     var(--color-secondary-50);
+  --bg-dark:                var(--color-dark);
+  --bg-card:                var(--color-white);
+  --bg-overlay:             rgba(13, 34, 51, 0.60);
+
+  /* Text */
+  --txt-base:               #1a2e3b;
+  --txt-secondary:          var(--color-gray-600);
+  --txt-muted:              var(--color-gray-500);
+  --txt-placeholder:        var(--color-gray-400);
+  --txt-disabled:           var(--color-gray-300);
+  --txt-on-dark:            var(--color-white);
+  --txt-on-primary:         var(--color-white);
+  --txt-on-navy:            var(--color-white);
+  --txt-heading:            var(--color-navy-500);     /* headings use navy */
+  --txt-link:               var(--color-primary-500);  /* links use primary */
+  --txt-link-hover:         var(--color-primary-600);
+  --txt-accent:             var(--color-secondary-500);
+
+  /* Borders */
+  --border-color:           var(--color-gray-200);
+  --border-color-dark:      var(--color-gray-300);
+  --border-color-primary:   var(--color-primary-200);
+  --border-color-navy:      var(--color-navy-200);
+  --border-color-secondary: var(--color-secondary-200);
+
+  /* ============================================================
+     2. TYPOGRAPHY
+     ============================================================ */
+
+  /* Font family */
+  --font-primary:           'Poppins', sans-serif;
+  --font-mono:              'Courier New', Courier, monospace;
+
+  /* ── Font Size Scale ── */
+  /* Base = 16px; Major-Third ratio ~1.250 */
+  --fs-2xs:                 0.625rem;    /*  10 px */
+  --fs-xs:                  0.75rem;     /*  12 px */
+  --fs-sm:                  0.875rem;    /*  14 px */
+  --fs-base:                1rem;        /*  16 px  ← body default */
+  --fs-md:                  1.125rem;    /*  18 px */
+  --fs-lg:                  1.25rem;     /*  20 px */
+  --fs-xl:                  1.5rem;      /*  24 px */
+  --fs-2xl:                 1.875rem;    /*  30 px */
+  --fs-3xl:                 2.25rem;     /*  36 px */
+  --fs-4xl:                 3rem;        /*  48 px */
+  --fs-5xl:                 3.75rem;     /*  60 px */
+  --fs-6xl:                 4.5rem;      /*  72 px */
+
+  /* ── Heading sizes (desktop) ── */
+  --h1-size:                var(--fs-4xl);    /* 60 px */
+  --h2-size:                var(--fs-3xl);    /* 48 px */
+  --h3-size:                var(--fs-2xl);    /* 36 px */
+  --h4-size:                var(--fs-xl);    /* 30 px */
+  --h5-size:                var(--fs-lg);     /* 24 px */
+  --h6-size:                var(--fs-md);     /* 20 px */
+
+  /* ── Heading sizes (tablet  ≤ 1024 px) ── */
+  --h1-size-md:             var(--fs-4xl);    /* 48 px */
+  --h2-size-md:             var(--fs-3xl);    /* 36 px */
+  --h3-size-md:             var(--fs-2xl);    /* 30 px */
+  --h4-size-md:             var(--fs-xl);     /* 24 px */
+  --h5-size-md:             var(--fs-lg);     /* 20 px */
+  --h6-size-md:             var(--fs-md);     /* 18 px */
+
+  /* ── Heading sizes (mobile  ≤ 768 px) ── */
+  --h1-size-sm:             var(--fs-3xl);    /* 36 px */
+  --h2-size-sm:             var(--fs-2xl);    /* 30 px */
+  --h3-size-sm:             var(--fs-xl);     /* 24 px */
+  --h4-size-sm:             var(--fs-lg);     /* 20 px */
+  --h5-size-sm:             var(--fs-md);     /* 18 px */
+  --h6-size-sm:             var(--fs-base);   /* 16 px */
+
+  /* ── Font Weights ── */
+  --fw-thin:                100;
+  --fw-extralight:          200;
+  --fw-light:               300;
+  --fw-regular:             400;
+  --fw-medium:              500;
+  --fw-semibold:            600;
+  --fw-bold:                700;
+  --fw-extrabold:           800;
+  --fw-black:               900;
+
+  /* Semantic weight aliases */
+  --fw-body:                var(--fw-regular);
+  --fw-label:               var(--fw-medium);
+  --fw-heading:             var(--fw-black);
+  --fw-subheading:          var(--fw-bold);
+  --fw-caption:             var(--fw-regular);
+  --fw-btn:                 var(--fw-semibold);
+  --fw-nav:                 var(--fw-medium);
+  --fw-badge:               var(--fw-semibold);
+  --fw-tag:                 var(--fw-semibold);
+
+  /* ── Line Heights ── */
+  --lh-none:                1;
+  --lh-tight:               1.1;
+  --lh-snug:                1.25;
+  --lh-snug-normal:         1.4;
+  --lh-normal:              1.5;
+  --lh-relaxed:             1.7;
+  --lh-loose:               2;
+
+  /* Semantic */
+  --lh-heading:             var(--lh-tight);
+  --lh-subheading:          var(--lh-snug);
+  --lh-body:                var(--lh-relaxed);
+  --lh-caption:             var(--lh-normal);
+  --lh-btn:                 var(--lh-normal);
+
+  /* ── Letter Spacing ── */
+  --ls-tighter:             -0.05em;
+  --ls-tight:               -0.025em;
+  --ls-normal:               0em;
+  --ls-wide:                 0.025em;
+  --ls-wider:                0.08em;
+  --ls-widest:               0.15em;
+
+  /* Semantic */
+  --ls-heading:             var(--ls-tight);
+  --ls-body:                var(--ls-normal);
+  --ls-tag:                 var(--ls-widest);    /* section labels / badges */
+  --ls-btn:                 var(--ls-wide);
+  --ls-nav:                 var(--ls-normal);
+
+  /* ── Body Text Specific ── */
+  --body-font-size:         var(--fs-base);
+  --body-line-height:       var(--lh-body);
+  --body-font-weight:       var(--fw-body);
+  --body-color:             var(--txt-base);
+  --body-bg:                var(--bg-body);
+
+  /* ── Paragraph / Prose ── */
+  --prose-max-width:        68ch;
+  --prose-narrow-width:     52ch;
+
+  /* ── Section label (the small tag above headings) ── */
+  --section-tag-size:       var(--fs-xs);
+  --section-tag-weight:     var(--fw-tag);
+  --section-tag-ls:         var(--ls-widest);
+  --section-tag-color:      var(--color-secondary-500);
+  --section-tag-dot:        var(--color-secondary-500);
+
+  /* ============================================================
+     3. SPACING  (8-pt grid)
+     ============================================================ */
+
+  --sp-0:                    0;
+  --sp-px:                   1px;
+  --sp-0-5:                  0.125rem;    /*  2 px */
+  --sp-1:                    0.25rem;     /*  4 px */
+  --sp-1-5:                  0.375rem;    /*  6 px */
+  --sp-2:                    0.5rem;      /*  8 px */
+  --sp-2-5:                  0.625rem;    /* 10 px */
+  --sp-3:                    0.75rem;     /* 12 px */
+  --sp-3-5:                  0.875rem;    /* 14 px */
+  --sp-4:                    1rem;        /* 16 px */
+  --sp-5:                    1.25rem;     /* 20 px */
+  --sp-6:                    1.5rem;      /* 24 px */
+  --sp-7:                    1.75rem;     /* 28 px */
+  --sp-8:                    2rem;        /* 32 px */
+  --sp-9:                    2.25rem;     /* 36 px */
+  --sp-10:                   2.5rem;      /* 40 px */
+  --sp-11:                   2.75rem;     /* 44 px */
+  --sp-12:                   3rem;        /* 48 px */
+  --sp-14:                   3.5rem;      /* 56 px */
+  --sp-16:                   4rem;        /* 64 px */
+  --sp-18:                   4.5rem;      /* 72 px */
+  --sp-20:                   5rem;        /* 80 px */
+  --sp-24:                   6rem;        /* 96 px */
+  --sp-28:                   7rem;        /* 112 px */
+  --sp-32:                   8rem;        /* 128 px */
+  --sp-36:                   9rem;        /* 144 px */
+  --sp-40:                   10rem;       /* 160 px */
+
+  /* ── Semantic spacing ── */
+  --gap-xs:                 var(--sp-2);
+  --gap-sm:                 var(--sp-4);
+  --gap-md:                 var(--sp-6);
+  --gap-lg:                 var(--sp-8);
+  --gap-xl:                 var(--sp-12);
+  --gap-2xl:                var(--sp-16);
+
+  --section-pad-y:          var(--sp-20);
+  --section-pad-y-sm:       var(--sp-12);
+  --section-pad-y-lg:       var(--sp-32);
+
+  /* ============================================================
+     4. LAYOUT
+     ============================================================ */
+
+  --container-max:          1400px;
+  --container-pad-x:        1.5rem;    /* inline padding at all sizes */
+  --container-pad-x-md:     2rem;      /* ≥ 1024 px */
+  --container-pad-x-lg:     3rem;      /* ≥ 1280 px */
+
+  --header-height:          72px;
+  --header-height-scrolled: 60px;
+
+  --grid-cols:              12;
+  --grid-gap:               var(--sp-6);
+  --grid-gap-sm:            var(--sp-4);
+
+  /* ============================================================
+     5. BORDER RADIUS
+     ============================================================ */
+
+  --radius-none:             0;
+  --radius-xs:               2px;
+  --radius-sm:               4px;
+  --radius-md:               8px;
+  --radius-lg:               12px;
+  --radius-xl:               16px;
+  --radius-2xl:              20px;
+  --radius-3xl:              24px;
+  --radius-4xl:              32px;
+  --radius-pill:             9999px;
+  --radius-circle:           50%;
+
+  /* Semantic aliases */
+  --radius-btn:              var(--radius-pill);     /* fully rounded CTA buttons */
+  --radius-btn-sm:           var(--radius-md);
+  --radius-card:             var(--radius-xl);
+  --radius-card-sm:          var(--radius-lg);
+  --radius-badge:            var(--radius-pill);
+  --radius-tag:              var(--radius-pill);
+  --radius-input:            var(--radius-md);
+  --radius-modal:            var(--radius-2xl);
+  --radius-nav:              var(--radius-sm);
+  --radius-image:            var(--radius-xl);
+  --radius-image-sm:         var(--radius-lg);
+  --radius-tooltip:          var(--radius-md);
+
+  /* ============================================================
+     6. BORDERS
+     ============================================================ */
+
+  --border-width-thin:       1px;
+  --border-width-base:       1.5px;
+  --border-width-thick:      2px;
+  --border-width-heavy:      3px;
+
+  --border-default:          var(--border-width-thin) solid var(--border-color);
+  --border-primary:          var(--border-width-base) solid var(--color-primary-300);
+  --border-navy:             var(--border-width-base) solid var(--color-navy-300);
+  --border-secondary:        var(--border-width-base) solid var(--color-secondary-300);
+  --border-dark:             var(--border-width-thin) solid var(--border-color-dark);
+  --border-focus:            var(--border-width-thick) solid var(--color-primary-500);
+
+  /* ============================================================
+     7. SHADOWS
+     ============================================================ */
+
+  --shadow-none:             none;
+  --shadow-xs:               0 1px 2px   rgba(2, 97, 170, 0.05);
+  --shadow-sm:               0 2px 6px   rgba(2, 97, 170, 0.08);
+  --shadow-md:               0 4px 16px  rgba(2, 97, 170, 0.10);
+  --shadow-lg:               0 8px 24px  rgba(2, 97, 170, 0.14);
+  --shadow-xl:               0 16px 48px rgba(2, 97, 170, 0.18);
+  --shadow-2xl:              0 24px 64px rgba(2, 97, 170, 0.22);
+
+  /* Coloured glow shadows (for buttons / highlights) */
+  --shadow-primary:          0 4px 20px  rgba(2, 97, 170, 0.40);
+  --shadow-navy:             0 4px 20px  rgba(31, 88, 121, 0.35);
+  --shadow-secondary:        0 4px 20px  rgba(40, 122, 112, 0.35);
+
+  /* Inset */
+  --shadow-inset-sm:         inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md:         inset 0 2px 6px rgba(0, 0, 0, 0.10);
+
+  /* Semantic */
+  --shadow-card:             var(--shadow-md);
+  --shadow-card-hover:       var(--shadow-lg);
+  --shadow-dropdown:         var(--shadow-lg);
+  --shadow-modal:            var(--shadow-2xl);
+  --shadow-btn:              var(--shadow-sm);
+  --shadow-btn-hover:        var(--shadow-primary);
+  --shadow-nav:              var(--shadow-sm);
+
+  /* ============================================================
+     8. TRANSITIONS & ANIMATION
+     ============================================================ */
+
+  /* Durations */
+  --dur-instant:             75ms;
+  --dur-fast:                150ms;
+  --dur-base:                250ms;
+  --dur-slow:                400ms;
+  --dur-slower:              600ms;
+  --dur-sluggish:            800ms;
+
+  /* Easings */
+  --ease-linear:             linear;
+  --ease-in:                 cubic-bezier(0.4,  0,    1,    1);
+  --ease-out:                cubic-bezier(0,    0,    0.2,  1);
+  --ease-in-out:             cubic-bezier(0.4,  0,    0.2,  1);
+  --ease-spring:             cubic-bezier(0.22, 1,    0.36, 1);
+  --ease-bounce:             cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-sharp:              cubic-bezier(0.4,  0,    0.6,  1);
+
+  /* Shorthand transitions */
+  --transition-fast:         var(--dur-fast)   var(--ease-in-out);
+  --transition-base:         var(--dur-base)   var(--ease-in-out);
+  --transition-slow:         var(--dur-slow)   var(--ease-spring);
+
+  /* Semantic transitions */
+  --transition-color:        color         var(--transition-fast),
+                             background    var(--transition-fast),
+                             border-color  var(--transition-fast);
+  --transition-shadow:       box-shadow    var(--transition-base);
+  --transition-transform:    transform     var(--transition-base) var(--ease-spring);
+  --transition-opacity:      opacity       var(--transition-base);
+
+  /* Named — component level */
+  --transition-btn:          color         var(--transition-fast),
+                             background    var(--transition-fast),
+                             border-color  var(--transition-fast),
+                             box-shadow    var(--transition-base),
+                             transform     var(--dur-fast) var(--ease-spring);
+
+  --transition-card:         box-shadow    var(--transition-base),
+                             transform     var(--transition-slow);
+
+  --transition-nav-link:     color         var(--transition-fast),
+                             opacity       var(--transition-fast);
+
+  --transition-input:        border-color  var(--transition-fast),
+                             box-shadow    var(--transition-fast),
+                             background    var(--transition-fast);
+
+  --transition-overlay:      opacity       var(--transition-base);
+
+  /* ============================================================
+     9. COMPONENTS — BUTTONS
+     ============================================================ */
+
+  /* Sizes */
+  --btn-h-xs:                28px;
+  --btn-h-sm:                36px;
+  --btn-h-md:                44px;    /* default */
+  --btn-h-lg:                52px;
+  --btn-h-xl:                60px;
+
+  --btn-pad-x-xs:            var(--sp-3);
+  --btn-pad-x-sm:            var(--sp-4);
+  --btn-pad-x-md:            var(--sp-6);
+  --btn-pad-x-lg:            var(--sp-8);
+  --btn-pad-x-xl:            var(--sp-10);
+
+  --btn-fs-xs:               var(--fs-xs);
+  --btn-fs-sm:               var(--fs-sm);
+  --btn-fs-md:               var(--fs-base);
+  --btn-fs-lg:               var(--fs-md);
+  --btn-fs-xl:               var(--fs-lg);
+
+  --btn-fw:                  var(--fw-semibold);
+  --btn-radius:              var(--radius-pill);
+  --btn-radius-sm:           var(--radius-md);
+  --btn-gap:                 var(--sp-2);    /* gap between icon + label */
+
+  /* Primary button (#0261aa CTA) */
+  --btn-primary-bg:          var(--color-primary-500);
+  --btn-primary-bg-hover:    var(--color-primary-600);
+  --btn-primary-bg-active:   var(--color-primary-700);
+  --btn-primary-color:       var(--color-white);
+  --btn-primary-border:      transparent;
+  --btn-primary-shadow:      var(--shadow-primary);
+
+  /* Secondary button (outlined primary) */
+  --btn-secondary-bg:        transparent;
+  --btn-secondary-bg-hover:  var(--color-primary-50);
+  --btn-secondary-color:     var(--color-primary-500);
+  --btn-secondary-border:    var(--color-primary-500);
+
+  /* Dark / Navy button */
+  --btn-dark-bg:             var(--color-navy-500);
+  --btn-dark-bg-hover:       var(--color-navy-600);
+  --btn-dark-color:          var(--color-white);
+
+  /* Ghost / text button */
+  --btn-ghost-bg:            transparent;
+  --btn-ghost-bg-hover:      var(--color-navy-50);
+  --btn-ghost-color:         var(--color-navy-500);
+
+  /* Green / accent button */
+  --btn-accent-bg:           var(--color-secondary-500);
+  --btn-accent-bg-hover:     var(--color-secondary-600);
+  --btn-accent-color:        var(--color-white);
+
+  /* ============================================================
+     10. COMPONENTS — CARDS
+     ============================================================ */
+
+  --card-bg:                 var(--color-white);
+  --card-bg-alt:             var(--color-gray-50);
+  --card-border:             var(--border-default);
+  --card-radius:             var(--radius-xl);
+  --card-shadow:             var(--shadow-card);
+  --card-shadow-hover:       var(--shadow-card-hover);
+  --card-pad:                var(--sp-6);
+  --card-pad-sm:             var(--sp-4);
+  --card-pad-lg:             var(--sp-8);
+  --card-transition:         var(--transition-card);
+
+  /* Product card specific */
+  --product-card-radius:     var(--radius-2xl);
+  --product-card-pad:        var(--sp-5);
+  --product-card-img-h:      220px;
+  --product-card-img-h-sm:   180px;
+
+  /* Feature icon card */
+  --feature-icon-size:       52px;
+  --feature-icon-radius:     var(--radius-lg);
+  --feature-icon-bg:         var(--color-navy-50);
+  --feature-icon-color:      var(--color-navy-500);
+
+  /* ============================================================
+     11. COMPONENTS — NAVIGATION
+     ============================================================ */
+
+  --nav-height:              var(--header-height);
+  --nav-bg:                  var(--color-white);
+  --nav-bg-scrolled:         var(--color-white);
+  --nav-shadow-scrolled:     var(--shadow-sm);
+  --nav-link-color:          var(--txt-base);
+  --nav-link-hover:          var(--color-navy-500);
+  --nav-link-active:         var(--color-primary-500);
+  --nav-link-fw:             var(--fw-medium);
+  --nav-link-fs:             var(--fs-sm);
+  --nav-gap:                 var(--sp-8);
+  --nav-dropdown-radius:     var(--radius-lg);
+  --nav-dropdown-shadow:     var(--shadow-dropdown);
+  --nav-dropdown-pad:        var(--sp-2);
+
+  /* ============================================================
+     12. COMPONENTS — FORMS / INPUTS
+     ============================================================ */
+
+  --input-h:                 48px;
+  --input-h-sm:              40px;
+  --input-h-lg:              56px;
+
+  --input-pad-x:             var(--sp-4);
+  --input-pad-y:             var(--sp-3);
+
+  --input-fs:                var(--fs-base);
+  --input-fw:                var(--fw-regular);
+  --input-color:             var(--txt-base);
+  --input-placeholder:       var(--txt-placeholder);
+
+  --input-bg:                var(--color-white);
+  --input-bg-focus:          var(--color-white);
+  --input-bg-disabled:       var(--color-gray-100);
+
+  --input-border:            var(--border-default);
+  --input-border-focus:      var(--border-focus);
+  --input-border-error:      2px solid var(--color-error);
+  --input-radius:            var(--radius-input);
+  --input-shadow-focus:      0 0 0 3px rgba(2, 97, 170, 0.15);
+
+  --textarea-min-h:          120px;
+
+  /* ============================================================
+     13. COMPONENTS — BADGE / TAG / PILL
+     ============================================================ */
+
+  --badge-pad-x:             var(--sp-3);
+  --badge-pad-y:             var(--sp-1);
+  --badge-fs:                var(--fs-xs);
+  --badge-fw:                var(--fw-semibold);
+  --badge-radius:            var(--radius-pill);
+  --badge-ls:                var(--ls-wide);
+
+  /* Primary badge */
+  --badge-primary-bg:        var(--color-primary-100);
+  --badge-primary-color:     var(--color-primary-700);
+
+  /* Blue badge */
+  --badge-blue-bg:           var(--color-blue-100);
+  --badge-blue-color:        var(--color-blue-700);
+
+  /* Green badge */
+  --badge-green-bg:          var(--color-secondary-100);
+  --badge-green-color:       var(--color-secondary-700);
+
+  /* ============================================================
+     14. COMPONENTS — SECTION TAG (above headings)
+     ============================================================ */
+
+  --stag-fs:                 var(--fs-xs);
+  --stag-fw:                 var(--fw-semibold);
+  --stag-ls:                 var(--ls-widest);
+  --stag-color:              var(--color-secondary-500);
+  --stag-dot-size:           6px;
+  --stag-dot-color:          var(--color-secondary-500);
+  --stag-gap:                var(--sp-2);
+  --stag-mb:                 var(--sp-3);
+
+  /* ============================================================
+     15. COMPONENTS — FAQ / ACCORDION
+     ============================================================ */
+
+  --accordion-border:        var(--border-default);
+  --accordion-radius:        var(--radius-lg);
+  --accordion-pad:           var(--sp-5) var(--sp-6);
+  --accordion-bg:            var(--color-white);
+  --accordion-bg-open:       var(--color-primary-50);
+  --accordion-fs:            var(--fs-md);
+  --accordion-fw:            var(--fw-medium);
+  --accordion-icon-color:    var(--color-blue-500);
+  --accordion-icon-size:     20px;
+
+  /* ============================================================
+     16. COMPONENTS — NEWSLETTER / CTA STRIP
+     ============================================================ */
+
+  --cta-bg:                  var(--color-primary-500);
+  --cta-color:               var(--color-white);
+  --cta-radius:              var(--radius-2xl);
+
+  /* ============================================================
+     17. COMPONENTS — FOOTER
+     ============================================================ */
+
+  --footer-bg:               var(--color-dark);
+  --footer-color:            var(--color-gray-300);
+  --footer-heading-color:    var(--color-white);
+  --footer-link-color:       var(--color-gray-300);
+  --footer-link-hover:       var(--color-white);
+  --footer-border:           1px solid rgba(255,255,255,0.08);
+  --footer-fs:               var(--fs-sm);
+
+  /* ============================================================
+     18. Z-INDEX SCALE
+     ============================================================ */
+
+  --z-below:                -1;
+  --z-base:                  0;
+  --z-raised:                10;
+  --z-float:                 20;
+  --z-dropdown:              100;
+  --z-sticky:                200;
+  --z-nav:                   300;
+  --z-overlay:               400;
+  --z-modal:                 500;
+  --z-toast:                 600;
+  --z-tooltip:               700;
+
+  /* ============================================================
+     19. ICON SIZES
+     ============================================================ */
+
+  --icon-xs:                 12px;
+  --icon-sm:                 16px;
+  --icon-base:               20px;
+  --icon-md:                 24px;
+  --icon-lg:                 32px;
+  --icon-xl:                 40px;
+  --icon-2xl:                48px;
+
+  /* ============================================================
+     20. GRADIENTS
+     ============================================================ */
+
+  --gradient-primary:        linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+  --gradient-primary-soft:   linear-gradient(135deg, var(--color-primary-50)  0%, var(--color-navy-50)    100%);
+  --gradient-hero:           linear-gradient(135deg, var(--color-navy-500)    0%, var(--color-primary-500) 100%);
+  --gradient-secondary:      linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-navy-500)  100%);
+  --gradient-dark:           linear-gradient(180deg, transparent 0%, rgba(13,34,51,0.85) 100%);
+  --gradient-card-hover:     linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+
+  /* ============================================================
+     21. ASPECT RATIOS
+     ============================================================ */
+
+  --ratio-square:            1 / 1;
+  --ratio-landscape:         4 / 3;
+  --ratio-widescreen:        16 / 9;
+  --ratio-portrait:          3 / 4;
+  --ratio-hero:              16 / 7;
+  --ratio-product:           1 / 1;
+
+}
