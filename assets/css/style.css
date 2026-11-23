@@ -983,20 +983,19 @@
 
 /* Trigger button — pill shape */
 .faq__trigger {
-  width:            100%;
-  display:          flex;
-  align-items:      center;
-  justify-content:  space-between;
-  gap:              var(--sp-4);
-  padding:          var(--sp-4) var(--sp-4) var(--sp-4) var(--sp-6);
+  width:           100%;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             var(--sp-4);
+  padding:         var(--sp-4) var(--sp-4) var(--sp-4) var(--sp-6);
   background-color: var(--color-primary-500);
-  border:           none;
-  border-radius:    var(--radius-pill);
-  color:            var(--color-white);
-  cursor:           pointer;
-  text-align:       left;
-  transition:       background-color  var(--transition-fast),
-                    border-radius     0.3s var(--ease-out);
+  border:          none;
+  border-radius:   var(--radius-pill);
+  color:           var(--color-white);
+  cursor:          pointer;
+  text-align:      left;
+  transition:      background-color var(--transition-fast);
 }
 
 .faq__trigger:hover {
