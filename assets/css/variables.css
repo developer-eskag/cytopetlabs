@@ -183,7 +183,7 @@
   /* Semantic weight aliases */
   --fw-body:                var(--fw-regular);
   --fw-label:               var(--fw-medium);
-  --fw-heading:             var(--fw-black);
+  --fw-heading:             var(--fw-extrabold);
   --fw-subheading:          var(--fw-bold);
   --fw-caption:             var(--fw-regular);
   --fw-btn:                 var(--fw-semibold);
